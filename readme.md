@@ -31,13 +31,22 @@ It is always recommended to remove any existing installations of Node.js or npm 
 * There are 3 commands you need to know once PostgreSQL is installed:
 
     * status for checking the status of your database.
-        * sudo service postgresql 
+
+        sudo service postgresql 
     
     * to start running your database.
-        * sudo service postgresql start 
+    
+        sudo service postgresql start 
     
     * stop to stop running your database.
-        * sudo service postgresql 
+    
+        sudo service postgresql 
+
+* To run PostgreSQL with psql shell:
+
+    sudo service postgresql start
+
+    sudo -u postgres psql
 
 * https://chloesun.medium.com/set-up-postgresql-on-wsl2-and-connect-to-postgresql-with-pgadmin-on-windows-ca7f0b7f38ab
 
