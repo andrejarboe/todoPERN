@@ -18,3 +18,25 @@ It is always recommended to remove any existing installations of Node.js or npm 
 * command -v nvm 
     * should return nvm
 * nvm install --lts
+
+# postgresql
+
+* sudo apt update
+* sudo apt install postgresql postgresql-contrib
+
+* The default admin user, postgres, needs a password assigned in order to connect to a database. To set a password:
+
+    * Enter the command: sudo passwd postgres
+
+* There are 3 commands you need to know once PostgreSQL is installed:
+
+    * status for checking the status of your database.
+        * sudo service postgresql 
+    
+    * to start running your database.
+        * sudo service postgresql start 
+    
+    * stop to stop running your database.
+        * sudo service postgresql 
+
+
