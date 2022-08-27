@@ -27,24 +27,27 @@
 
 // update a todo 
 
-const express = require('express')
-const app = express()
-const port = 5000
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 5000;
 const cors = require("cors");
 
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 
 // //middleware
 app.use(cors());
-app.use(express.urlencoded());
 app.use(express.json()) //res.body
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.get('/', (req, res) => {
     res.send(`Hello asdf ! From port ${port}.`)
 })
 
 // create a todo
-app.post("/todos", async (req, res) => {
+app.post("/todos", urlencodedParser, async (req, res) => {
     try {
 
         console.log(res.body);
